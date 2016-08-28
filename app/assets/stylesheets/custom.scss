@@ -34,3 +34,9 @@ body {
 .alert-notice {
   @extend .alert-info;
 }
+
+#error_explanation {
+	padding: 1rem;
+	border-radius: 5px;
+	margin-bottom: 2rem;
+}
