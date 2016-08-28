@@ -3,3 +3,9 @@ To do:
 1. Custom fonts
 http://www.1001freefonts.com/
 https://github.com/typekit/webfontloader
+
+2. Edit and Delete function only for your own posts
+
+3. "New Note" button on Main page, toggle link_to if logged in or not
+
+4. Click on the Note div to read full Note
