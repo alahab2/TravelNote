@@ -10,6 +10,7 @@
 body { 
 	.navbar-brand {
 		font-family: "Orange Juice";
+		font-size: 4rem;
 	}
 	padding-top: 70px; 
 	.noteContainer {
@@ -18,7 +19,7 @@ body {
 			padding: 10px;
 			border: 1px solid rgba(0,0,0,0.2);
 			min-height: 200px;
-			h1{
+			h1 {
 				text-align: center;
 			}
 		}
