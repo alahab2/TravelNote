@@ -1,8 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Notes</h1>
+<%= link_to 'New Note', new_note_path %>
 
-<table>
+<h1>Your Notes</h1>
+
+ 
+<div class="row">
+<% @notes.each do |note| %>
+  <div class="noteContainer col-xs-12 col-sm-4">
+    <h1><%= note.title %></h1>  
+    <p><%= note.text %></p>
+    <div class="metaInfo">
+      <%= note.location %>
+      <%= link_to 'Show Full Note', note %>
+      <%= link_to 'Edit', edit_note_path(note) %>
+      <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+
+<!-- <table border=1>
   <thead>
     <tr>
       <th>Title</th>
@@ -26,6 +46,6 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
 
-<%= link_to 'New Note', new_note_path %>
+
