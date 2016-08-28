@@ -24,6 +24,7 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.json
   def create
+    # @note.user_id = current_user.user_id
     @note = Note.new(note_params)
 
     respond_to do |format|

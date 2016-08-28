@@ -9,13 +9,14 @@
 <% @notes.each do |note| %>
   <div class="noteContainer col-xs-12 col-sm-4">
     <div class="innerNoteContainer">
-      <h1><%= note.title %></h1>  
+      <h1><%= note.title %></h1> 
+      <p>by <%= note.user.name %></p> 
       <p><%= note.text %></p>
       <div class="metaInfo">
         <%= note.location %><br />
-        <%= link_to 'Show Full Note', note %>
-        <%= link_to 'Edit', edit_note_path(note) %>
-        <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Show Full Note', note %> |
+        <%= link_to 'Edit', edit_note_path(note) %> |
+        <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
 
     </div>
