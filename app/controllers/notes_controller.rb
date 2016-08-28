@@ -14,7 +14,7 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   def new
-    @note = Note.new
+    @note = current_user.notes.create!(note_params)
   end
 
   # GET /notes/1/edit

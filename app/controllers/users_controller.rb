@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @notes = Note.all
+    @user_notes = @user.notes
   end
 end
