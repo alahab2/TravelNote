@@ -1,11 +1,17 @@
 
 
+<% if (user_signed_in?) %>
 <%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
+<% else %>
+<%= link_to 'New Note', new_user_session_path, class: "btn btn-warning new-note-btn" %>
+<% end %>
 
-<h1>Your Notes</h1>
+
+<h1>Notes from all over the world</h1>
 
  
 <div class="row">
+<% if @notes.size > 0 %>
 <% @notes.each do |note| %>
   <div class="noteContainer col-xs-12 col-sm-6 col-md-4">
     <div class="innerNoteContainer">
@@ -14,14 +20,20 @@
       <p><%= note.text.truncate(160) %></p>
       <div class="metaInfo">
         <%= note.location %><br />
-        <%= link_to 'Show Full Note', note %> |
-        <%= link_to 'Edit', edit_note_path(note) %> |
-        <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Show Full Note', note %> 
+
+        <% if (user_signed_in? && (current_user.id == note.user_id)) %>
+        | <%= link_to 'Edit', edit_note_path(note) %> 
+        | <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </div>
 
     </div>
     
   </div>
+  <% end %>
+  <% else %>
+  <h1>Oooops, looks like there are no notes yet.</h1>
   <% end %>
 </div>
 
