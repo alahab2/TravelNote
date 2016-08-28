@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Note', new_note_path %>
+<%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
 
 <h1>Your Notes</h1>
 
@@ -8,14 +8,18 @@
 <div class="row">
 <% @notes.each do |note| %>
   <div class="noteContainer col-xs-12 col-sm-4">
-    <h1><%= note.title %></h1>  
-    <p><%= note.text %></p>
-    <div class="metaInfo">
-      <%= note.location %>
-      <%= link_to 'Show Full Note', note %>
-      <%= link_to 'Edit', edit_note_path(note) %>
-      <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <div class="innerNoteContainer">
+      <h1><%= note.title %></h1>  
+      <p><%= note.text %></p>
+      <div class="metaInfo">
+        <%= note.location %>
+        <%= link_to 'Show Full Note', note %>
+        <%= link_to 'Edit', edit_note_path(note) %>
+        <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+
     </div>
+    
   </div>
   <% end %>
 </div>

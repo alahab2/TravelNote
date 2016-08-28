@@ -1,0 +1,26 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@font-face {
+  font-family: "Orange Juice";
+  src: font-url('orange_juice/orange_juice_2.0.ttf') format("truetype");
+}
+
+
+body { 
+	.navbar-brand {
+		font-family: "Orange Juice";
+	}
+	padding-top: 70px; 
+	.noteContainer {
+		padding: 10px;
+		.innerNoteContainer {
+			padding: 10px;
+			border: 1px solid rgba(0,0,0,0.2);
+			min-height: 200px;
+			h1{
+				text-align: center;
+			}
+		}
+	}
+}
