@@ -12,4 +12,4 @@ https://github.com/typekit/webfontloader - DONE
 
 5. Add geolocation
 
-6. Add when note was published
+6. Add when note was published - DONE
