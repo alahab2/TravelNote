@@ -11,6 +11,10 @@ gem 'devise', '3.4.1'
 
 gem 'jquery-turbolinks'
 
+gem 'ckeditor'
+
+gem 'paperclip'
+
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
