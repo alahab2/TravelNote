@@ -8,6 +8,7 @@
 }
 
 
+
 body { 
 	.navbar-brand {
 		font-family: "Orange Juice";
@@ -20,6 +21,7 @@ body {
 			padding: 10px;
 			border: 1px solid rgba(0,0,0,0.2);
 			min-height: 270px;
+			overflow: hidden;
 			h1 {
 				text-align: center;
 			}
