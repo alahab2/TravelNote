@@ -10,11 +10,22 @@
 
 
 body { 
+	// padding-top: 70px; 
 	.navbar-brand {
 		font-family: "Orange Juice";
 		font-size: 4rem;
 	}
-	padding-top: 70px; 
+	.jumbotron {
+		width: 100%;
+		min-height: 300px;
+    	height: auto;
+		background-image: image-url("view_over_himalays_nepal.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		//background-attachment: fixed;
+		background-color: transparent;
+	}
 	.noteContainer {
 		padding: 10px;
 		.innerNoteContainer {
@@ -42,3 +53,14 @@ body {
 	border-radius: 5px;
 	margin-bottom: 2rem;
 }
+
+//media queries
+
+@media screen and (min-width: 768px) {
+
+	body .jumbotron {
+		min-height: 550px;
+	}
+
+}
+

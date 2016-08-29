@@ -2,7 +2,7 @@ To do:
 
 1. Custom fonts
 http://www.1001freefonts.com/
-https://github.com/typekit/webfontloader - DONE
+https://github.com/typekit/webfontloader  - make fonts load asynchronyously
 
 2. Edit and Delete function only for your own  - DONE
   

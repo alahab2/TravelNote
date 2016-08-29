@@ -1,10 +1,19 @@
 
+<% content_for :top_content do %>
+<div class="jumbotron">
+  <div class="container">
+      <hi></hi>  
+    </div>
+</div>
+<% end %>
+
 
 <% if (user_signed_in?) %>
 <%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
 <% else %>
 <%= link_to 'New Note', new_user_session_path, class: "btn btn-warning new-note-btn" %>
 <% end %>
+
 
 
 <h1>Notes from all over the world</h1>
