@@ -17,7 +17,7 @@
     <div class="innerNoteContainer">
       <h1><%= note.title %></h1> 
       <p>by <%= note.user.name %></p> 
-      <p><%= note.text.truncate(160) %></p>
+      <p><%= raw(note.text.truncate(160)) %></p>
       <div class="metaInfo">
         <%= note.location %><br />
         <%= link_to 'Show Full Note', note %> 

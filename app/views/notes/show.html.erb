@@ -10,7 +10,7 @@
 
 <p>
   <strong>Text:</strong>
-  <%= @note.text %>
+  <%= raw(@note.text) %>
 </p>
 
 <% if (user_signed_in? && (current_user.id == @note.user_id)) %>
