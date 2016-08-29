@@ -2,10 +2,14 @@ To do:
 
 1. Custom fonts
 http://www.1001freefonts.com/
-https://github.com/typekit/webfontloader
+https://github.com/typekit/webfontloader - DONE
 
-2. Edit and Delete function only for your own posts
-
-3. "New Note" button on Main page, toggle link_to if logged in or not
+2. Edit and Delete function only for your own  - DONE
+  
+3. "New Note" button on Main page, toggle link_to if logged in or not - DONE
 
 4. Click on the Note div to read full Note
+
+5. Add geolocation
+
+6. Add when note was published
