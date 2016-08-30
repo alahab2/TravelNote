@@ -3,16 +3,17 @@
 <div class="jumbotron">
   <div class="container">
       <h1>Explore the world with millions of Travel Notes from more than 100 countries</h1>  
+      <% if (user_signed_in?) %>
+      <%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
+      <% else %>
+      <%= link_to 'New Note', new_user_session_path, class: "btn btn-warning new-note-btn" %>
+      <% end %>
     </div>
 </div>
 <% end %>
 
 
-<% if (user_signed_in?) %>
-<%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
-<% else %>
-<%= link_to 'New Note', new_user_session_path, class: "btn btn-warning new-note-btn" %>
-<% end %>
+
 
 
 
