@@ -14,6 +14,6 @@ https://github.com/typekit/webfontloader  - make fonts load asynchronyously
 
 6. Add when note was published - DONE
 
-7. CHange burger in the menu
+7. CHange burger in the menu - DONE 
 
-8. Change profile name when dropsown clicked
+8. Change profile name when dropsown clicked - DONE

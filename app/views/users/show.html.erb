@@ -8,7 +8,7 @@
   <div class="noteContainer col-xs-12 col-sm-6 col-md-4">
     <div class="innerNoteContainer">
       <h1><%= note.title %></h1>  
-      <p><%= note.text.truncate(160) %></p>
+      <p><%= raw(note.text.truncate(160)) %></p>
       <div class="metaInfo">
         <%= note.location %><br />
         <%= link_to 'Show Full Note', note %> 

@@ -31,11 +31,15 @@ $orange: #EA7317;
 }
 
 body { 
+	padding-top: 60px;
 	font-family: "Lato";
 	.navbar {
 		background-color: $lightblue;
 		background-image: none;
 		border: none;
+		&.navbar-fixed-top {
+			padding-top: 10px;
+		}
 		.navbar-brand {
 			font-family: "Orange Juice";
 			font-size: 4rem;
@@ -46,7 +50,7 @@ body {
 			@include navColor($yellow);
 		}
 		.navbar-nav > .open > a {
-			background-color: none;
+			background-color: transparent;
 			&:focus,
 			&:hover,
 			&:active {
@@ -73,6 +77,12 @@ body {
 				}
 			}
 		}
+		.navbar-toggle {
+			border: 2px solid $yellow;
+			.icon-bar {
+				background-color: yellow;
+			}
+		}
 	}
 	
 	.jumbotron {
@@ -88,6 +98,25 @@ body {
 	}
 	.pageTitle {
 		text-align: center;
+	}
+
+	.new-note-btn {
+		background-color: transparent;
+		background-image: none;
+		border-radius: 0;
+		border-color: $blue;
+		color: $blue;
+		font-size: 2rem;
+		&:focus,
+		&:hover,
+		&:active,
+		&:active:hover {
+			@extend .new-note-btn;
+			background-color: $yellow;
+			outline: none;
+			box-shadow: none;
+		}
+
 	}
 	.noteContainer {
 		padding: 10px;
@@ -131,9 +160,7 @@ body {
 		min-height: 550px;
 	}
 
-	.navbar-fixed-top {
-		padding-top: 10px;
-	}
+	
 
 }
 
