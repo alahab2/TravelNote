@@ -27,6 +27,7 @@
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	        <% if user_signed_in? %>
+	          <li><%= link_to 'New Note', new_note_path, class: "new-note-nav" %></li>	
 	          <li class="dropdown">
 	            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 	              <%= current_user.name %>
@@ -50,13 +51,12 @@
 
 <body>
 
-<div class="container">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
       <%= value %>
     </div>
   <% end %>
-</div>
+
 
 <%= yield :top_content %>
 

@@ -4,7 +4,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    @notes = Note.all.order('updated_at DESC')
   end
 
   # GET /notes/1
@@ -57,7 +57,7 @@ class NotesController < ApplicationController
   def destroy
     @note.destroy
     respond_to do |format|
-      format.html { redirect_to notes_url, notice: 'Note was successfully destroyed.' }
+      format.html { redirect_to user_path(current_user), notice: 'Note was successfully deleted.' }
       format.json { head :no_content }
     end
   end

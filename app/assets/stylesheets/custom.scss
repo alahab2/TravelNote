@@ -163,12 +163,18 @@ body {
 	}
 }
 
+
 .alert-alert {
   @extend .alert-warning;
 }
 
 .alert-notice {
   @extend .alert-info;
+}
+
+.alert {
+	text-align: center;
+	margin-bottom: 0;
 }
 
 #error_explanation {
@@ -183,6 +189,12 @@ body {
 
 	body .jumbotron {
 		min-height: 550px;
+	}
+
+	.navbar ul li a.new-note-nav {
+		border: 2px solid $yellow;
+		padding: 6px;
+			margin-top: 8px;
 	}
 
 	
