@@ -16,7 +16,7 @@ class Note < ActiveRecord::Base
 
   has_attached_file :image,
                     styles: { 
-                      thumb: ["100x100#", :jpg], 
+                      thumb: ["100x100>", :jpg], 
                       medium: ["400x400>", :jpg],
                       original: ["800x800>", :jpg]
                       },
