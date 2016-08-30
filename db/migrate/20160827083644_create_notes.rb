@@ -7,5 +7,7 @@ class CreateNotes < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_attachment :notes, :asset
   end
 end
