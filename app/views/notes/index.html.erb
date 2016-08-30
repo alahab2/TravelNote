@@ -13,29 +13,26 @@
 <% end %>
 
 
-
-
-
-
 <h1 class="pageTitle">Notes from all over the world</h1>
 
  
-<div class="row">
+<div class="row mainPageRow">
 <% if @notes.size > 0 %>
 <% @notes.each do |note| %>
   <div class="noteContainer col-xs-12 col-sm-6 col-md-4">
     <div class="innerNoteContainer">
       <h1><%= note.title.truncate(80) %></h1> 
-      <p id="author">by <%= note.user.name %></p> 
-      <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago<p>
-      <p><%= raw(note.text.truncate(150)) %></p>
+      <p class="pageTitle"><%= note.location %></p>
+      
+      
       <div class="metaInfo">
-        <%= note.location %><br />
         <%= link_to 'Show Full Note', note %> 
-
         <% if (user_signed_in? && (current_user.id == note.user_id)) %>
         | <%= link_to 'Edit', edit_note_path(note) %> 
         <% end %>
+      </div>
+      <div class="timeAndUser">
+        <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= note.user.name %><p>
       </div>
 
     </div>

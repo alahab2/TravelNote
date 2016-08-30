@@ -5,8 +5,9 @@
 <p class="pageTitle">by <%= @note.user.name %></p>
 
 <div class="row">
-	<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1">
-		<%= image_tag @note.image.url, class: "img-responsive" %>
+	<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1"><% if @note.image.url != "/images/original/missing.png" %>
+			<%= image_tag @note.image.url, class: "img-responsive" %>
+		<% end %>
 	</div>
 </div>
 

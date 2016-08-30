@@ -14,7 +14,7 @@
 
 //colors
 $mint: #73BFB8;
-$blue: #2364AA;
+$blue: darken(#2364AA, 5%);
 $lightblue: #5AABC8;
 $yellow: #FFE900;
 $orange: #EA7317;
@@ -31,15 +31,15 @@ $orange: #EA7317;
 }
 
 body { 
-	padding-top: 60px;
+	padding-top: 70px;
 	font-family: "Lato";
 	padding-bottom: 4rem;
 	.navbar {
-		background-color: $lightblue;
+		background-color: $blue;
 		background-image: none;
 		border: none;
 		&.navbar-fixed-top {
-			padding-top: 10px;
+			padding: 10px 0;
 		}
 		.navbar-brand {
 			font-family: "Orange Juice";
@@ -62,11 +62,13 @@ body {
 			}
 		}
 		.dropdown-menu {
-			background-color: $lightblue;
+			background-color: $blue;
 			color: $yellow;
 			box-shadow: none;
 			border-radius: 0;
 			border: none;
+			padding: 15px 0;
+			min-width: 130px;
 			> li > a {
 				color: $yellow;
 				&:focus,
@@ -116,7 +118,7 @@ body {
 	.pageTitle {
 		text-align: center;
 	}
-
+	
 	.imageContainer {
 		text-align: center;
 		.img-responsive {
@@ -163,12 +165,14 @@ body {
 	}
 	.noteContainer {
 		padding: 10px;
+
 		.innerNoteContainer {
 			padding: 10px;
 			border: 1px solid rgba(0,0,0,0.2);
 			height: 290px;
 			overflow: hidden;
 			position: relative;
+			background-color: $lightblue;
 			h1, 
 			#author  {
 				text-align: center;
@@ -176,6 +180,13 @@ body {
 			.metaInfo {
 				position: absolute;
 				bottom: 5px;
+				right: 5px;
+				margin-bottom: 1rem;
+			}
+			.timeAndUser {
+				position: absolute;
+				bottom: 5px;
+	
 			}
 		}
 	}
@@ -214,8 +225,13 @@ body {
 		padding: 6px;
 			margin-top: 8px;
 	}
+}
 
-	
+@media screen and (max-width: 768px) {
 
+.mainPageRow {
+		max-width: 600px;
+		margin: auto;
+	}
 }
 

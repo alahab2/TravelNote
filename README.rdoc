@@ -29,3 +29,11 @@ https://www.sitepoint.com/uploading-files-with-paperclip/
 
 13. New Note button from main page move to Jumbotron - DONE
 
+14. Show note imge tag only if file exists
+
+15. New note typo upload file - DONE
+
+16. Fix navbar - DONE
+
+17. Paperclip warning when wrong filesize, add filesize text in the form
+
