@@ -11,25 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-    <p>Note: You can upload only one image per note. It is not required, but it will make you not so much better!</p>
-  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-9">
+      <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+        <p>Note: You can upload only one image per note. It is not required, but it will make you not so much better!</p>
+      </div>
 
-  <div class="field">
-    <%= f.label :title %>*<br>
-    <%= f.text_field :title, class: 'form-control' %>
+      <div class="field">
+        <%= f.label :title %>*<br>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= f.label :location %>*<br>
+        <%= f.text_field :location, class: 'form-control' %>
+        <p>Example: <em>Jakarta, Indonesia</em> or <em>Paris, France</em></p>
+      </div>
+      <div class="field">
+        <%= f.label :text %>*<br>
+        <%= f.cktext_area :text, class: 'form-control editor-field' %>
+      </div>
+      <div class="actions">
+        <%= f.submit class: 'btn new-note-btn'%>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :location %>*<br>
-    <%= f.text_field :location, class: 'form-control' %>
-  </div>
-  <div class="field">
-    <%= f.label :text %>*<br>
-    <%= f.cktext_area :text, class: 'form-control editor-field' %>
-  </div>
-  <div class="actions">
-    <%= f.submit class: 'btn new-note-btn'%>
-  </div>
+</div>
+
 <% end %>
+

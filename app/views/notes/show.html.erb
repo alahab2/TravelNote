@@ -1,19 +1,22 @@
-<p>
-  <strong>Title:</strong>
+<h1 class="pageTitle">
   <%= @note.title %>
-</p>
+</h1>
 
-<%= image_tag @note.image.url %>
+<p class="pageTitle">by <%= @note.user.name %></p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @note.location %>
-</p>
+<div class="row">
+	<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1">
+		<%= image_tag @note.image.url, class: "img-responsive" %>
+	</div>
+</div>
 
-<p>
-  <strong>Text:</strong>
-  <%= raw(@note.text) %>
-</p>
+<p class="pageTitle"><%= @note.location %></p>
+
+<div class="noteText">
+	<p>
+	  <%= raw(@note.text) %>
+	</p>
+</div>
 
 <% if (user_signed_in? && (current_user.id == @note.user_id)) %>
 <%= link_to 'Edit', edit_note_path(@note) %> |

@@ -33,6 +33,7 @@ $orange: #EA7317;
 body { 
 	padding-top: 60px;
 	font-family: "Lato";
+	padding-bottom: 4rem;
 	.navbar {
 		background-color: $lightblue;
 		background-image: none;
@@ -114,6 +115,19 @@ body {
 	}
 	.pageTitle {
 		text-align: center;
+	}
+
+	.imageContainer {
+		text-align: center;
+		.img-responsive {
+			margin: 0 auto 1.5rem auto;
+		}
+	}
+
+	.noteText {
+		border: 1px solid $blue;
+		padding: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	.field {
