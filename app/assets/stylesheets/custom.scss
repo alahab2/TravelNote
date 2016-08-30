@@ -134,6 +134,13 @@ body {
 			outline: none;
 			box-shadow: none;
 		}
+	}
+
+	.cancel-account {
+		margin-top: 0;
+		&:hover {
+			@extend .cancel-account;
+		}
 
 	}
 	.noteContainer {
