@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= image_tag @note.image.url %>
+
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
