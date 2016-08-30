@@ -17,3 +17,5 @@ https://github.com/typekit/webfontloader  - make fonts load asynchronyously
 7. CHange burger in the menu - DONE 
 
 8. Change profile name when dropsown clicked - DONE
+
+9. Add image loading and image disply on main page
