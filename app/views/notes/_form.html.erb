@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :text %><br>
-    <%= f.cktext_area :text %>
+    <%= f.cktext_area :text, class: 'form-control editor-field' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn new-note-btn'%>
   </div>
 <% end %>

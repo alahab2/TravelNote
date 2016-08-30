@@ -26,4 +26,5 @@ https://github.com/typekit/webfontloader  - make fonts load asynchronyously
 
 12. Limit number of characters in note title
 
+13. New Note button from main page move to Jumbotron
 
