@@ -13,3 +13,7 @@ https://github.com/typekit/webfontloader  - make fonts load asynchronyously
 5. Add geolocation
 
 6. Add when note was published - DONE
+
+7. CHange burger in the menu
+
+8. Change profile name when dropsown clicked

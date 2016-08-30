@@ -16,7 +16,7 @@
 
 
 
-<h1>Notes from all over the world</h1>
+<h1 class="pageTitle">Notes from all over the world</h1>
 
  
 <div class="row">
@@ -27,7 +27,7 @@
       <h1><%= note.title %></h1> 
       <p id="author">by <%= note.user.name %></p> 
       <p id="timeCreated"> <%= time_ago_in_words(note.created_at) %> ago<p>
-      <p><%= raw(note.text.truncate(160)) %></p>
+      <p><%= raw(note.text.truncate(150)) %></p>
       <div class="metaInfo">
         <%= note.location %><br />
         <%= link_to 'Show Full Note', note %> 
