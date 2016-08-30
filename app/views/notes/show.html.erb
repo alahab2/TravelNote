@@ -16,4 +16,4 @@
 <% if (user_signed_in? && (current_user.id == @note.user_id)) %>
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <% end %>
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Back to My Notes', user_path(current_user) %>

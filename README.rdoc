@@ -18,13 +18,13 @@ https://github.com/typekit/webfontloader  - make fonts load asynchronyously
 
 8. Change profile name when dropsown clicked - DONE
 
-9. Add image loading and image disply on main page
+9. Add image loading and image disply on note page
 
 10. Change form Location field to country with dropdown
 
 11. Add City field to form, not required
 
-12. Limit number of characters in note title
+12. Limit number of characters in note title 
 
-13. New Note button from main page move to Jumbotron
+13. New Note button from main page move to Jumbotron - DONE
 

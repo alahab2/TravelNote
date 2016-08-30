@@ -3,8 +3,12 @@ Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
+
+
 CKEDITOR.editorConfig = function( config )
 {
+
+  config.extraPlugins = 'wordcount,notification';
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
@@ -43,21 +47,61 @@ CKEDITOR.editorConfig = function( config )
     //{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
     { name: 'links', items: [ 'Link', 'Unlink' ] },
     //{ name: 'insert', items: [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar' ] },
-    
+     //{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] }
+    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline','-', 'RemoveFormat' ] },
+
     //{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-    { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'HorizontalRule', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+    { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+     
     '/',
     //{ name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
     { name: 'styles', items: [ 'Font', 'FontSize' ] },
-    { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
-    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] }
+    //{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+    { name: 'colors', items: [ 'TextColor'] },
+  
   ];
 
   config.toolbar_mini = [
     { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
     { name: 'styles', items: [ 'Font', 'FontSize' ] },
-    { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+    { name: 'colors', items: [ 'TextColor' ] },
     { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
     { name: 'insert', items: [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar' ] }
   ];
+
+
+  config.wordcount = {
+
+    // Whether or not you want to show the Paragraphs Count
+    showParagraphs: false,
+
+    // Whether or not you want to show the Word Count
+    showWordCount: true,
+
+    // Whether or not you want to show the Char Count
+    showCharCount: false,
+
+    // Whether or not you want to count Spaces as Chars
+    countSpacesAsChars: false,
+
+    // Whether or not to include Html chars in the Char Count
+    countHTML: false,
+
+    // Maximum allowed Word Count, -1 is default for unlimited
+    maxWordCount: 150,
+
+    // Maximum allowed Char Count, -1 is default for unlimited
+    maxCharCount: -1,
+
+    // Add filter to add or remove element before counting (see CKEDITOR.htmlParser.filter), Default value : null (no filter)
+    filter: new CKEDITOR.htmlParser.filter({
+        elements: {
+            div: function( element ) {
+                if(element.attributes.class == 'mediaembed') {
+                    return false;
+                }
+            }
+        }
+    })
+};
 };
