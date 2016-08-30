@@ -15,8 +15,17 @@ class Note < ActiveRecord::Base
   # end
 
   has_attached_file :image,
-                     styles: { thumb: ["64x64#", :jpg] }
+                    styles: { 
+                      thumb: ["100x100#", :jpg], 
+                      medium: ["400x400>", :jpg],
+                      original: ["800x800>", :jpg]
+                      },
+                    default_url: "/images/:style/missing.png",  
+                    url: "/system/:hash.:extension",
+                    hash_secret: "abc123"
+
   validates_attachment :image,
-                     content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+                       content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
+                       size: { in: 0..1000.kilobytes }
 
 end

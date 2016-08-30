@@ -19,6 +19,7 @@ https://github.com/typekit/webfontloader  - make fonts load asynchronyously
 8. Change profile name when dropsown clicked - DONE
 
 9. Add image loading and image disply on note page
+https://www.sitepoint.com/uploading-files-with-paperclip/
 
 10. Change form Location field to country with dropdown
 

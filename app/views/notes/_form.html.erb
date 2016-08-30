@@ -14,20 +14,19 @@
   <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image %>
+    <p>Note: You can upload only one image per note. It is not required, but it will make you not so much better!</p>
   </div>
 
-  <%= image_tag @note.image.url %>
-
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title %>*<br>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
+    <%= f.label :location %>*<br>
     <%= f.text_field :location, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :text %><br>
+    <%= f.label :text %>*<br>
     <%= f.cktext_area :text, class: 'form-control editor-field' %>
   </div>
   <div class="actions">
