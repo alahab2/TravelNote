@@ -10,7 +10,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'aws-sdk', '~> 2.3'
+gem 'sqlite3'
 
 gem 'devise', '3.4.1'
 
@@ -20,6 +20,8 @@ gem 'ckeditor'
 
 gem 'paperclip'
 
+gem 'carrierwave'
+gem 'cloudinary'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
@@ -58,6 +60,6 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'sqlite3'
+  
 end
 
