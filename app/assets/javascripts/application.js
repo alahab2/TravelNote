@@ -10,10 +10,21 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require ckeditor/init
 //= require bootstrap-sprockets
 
+
 //= require_tree .
+
+
+// init Isotope
+$(window).load(function(){
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'masonry'
+  });
+});

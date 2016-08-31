@@ -39,3 +39,5 @@ https://www.sitepoint.com/uploading-files-with-paperclip/
 
 18. Implement Masonry plugin
 
+19. Add delete image option on edit note
+

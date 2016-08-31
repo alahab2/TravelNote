@@ -17,35 +17,37 @@
 
  
 <div class="row mainPageRow">
-<% if @notes.size > 0 %>
-<% @notes.each do |note| %>
-  <div class="noteContainer col-xs-12 col-sm-6 col-md-4">
-    <% if note.image.url != "/images/original/missing.png" %>
-      <%= image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
-    <% end %>
-    <div class="innerNoteContainer">
-      <h1><%= note.title.truncate(45) %></h1> 
-      <p class="pageTitle"><%= note.location %></p>
-      
-      <p><%= raw(note.text.truncate(150)) %></p> 
-      
-      <div class="metaInfo">
-        <%= link_to 'Show Full Note', note %> 
-        <% if (user_signed_in? && (current_user.id == note.user_id)) %>
-        | <%= link_to 'Edit', edit_note_path(note) %> 
+  <div class="grid">
+    <% if @notes.size > 0 %>
+    <% @notes.each do |note| %>
+      <div class="noteContainer grid-item col-xs-12 col-sm-6 col-md-4">
+        <% if note.image.url != "/images/original/missing.png" %>
+          <%= image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
         <% end %>
-      </div>
-      <div class="timeAndUser">
-        <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= note.user.name %><p>
-      </div>
+        <div class="innerNoteContainer">
+          <h1><%= note.title.truncate(45) %></h1> 
+          <p class="pageTitle"><%= note.location %></p>
+          
+          <p><%= raw(note.text.truncate(150)) %></p> 
+          
+          <div class="metaInfo">
+            <%= link_to 'Show Full Note', note %> 
+            <% if (user_signed_in? && (current_user.id == note.user_id)) %>
+            | <%= link_to 'Edit', edit_note_path(note) %> 
+            <% end %>
+          </div>
+          <div class="timeAndUser">
+            <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= note.user.name %><p>
+          </div>
 
-    </div>
-    
+        </div>
+        
+      </div>
+    <% end %>
+    <% else %>
+    <h1>Oooops, looks like there are no notes yet.</h1>
+    <% end %>
   </div>
-  <% end %>
-  <% else %>
-  <h1>Oooops, looks like there are no notes yet.</h1>
-  <% end %>
 </div>
 
 

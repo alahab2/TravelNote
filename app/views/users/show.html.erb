@@ -2,10 +2,11 @@
 <%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
 
 <div class="row">
+<div class="grid">
 <% if @user_notes.size > 0 %>
 <% @user_notes.each do |note| %>
 
-  <div class="noteContainer col-xs-12 col-sm-6">
+  <div class="noteContainer grid-item col-xs-12 col-sm-6">
     <% if note.image.url != "/images/original/missing.png" %>
       <%= image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
     <% end %>
@@ -29,5 +30,6 @@
   <% else %>
   <h1 class="noNotesYetMessage">Oooops, looks like you dont have any notes yet. Time to fix it!</h1>
   <% end %>
+  </div>
 </div>
 
