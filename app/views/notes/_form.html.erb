@@ -16,7 +16,7 @@
       <div class="field">
         <%= f.label :image %>
         <%= f.file_field :image %>
-        <p>Note: You can upload only one image per note. It is not required, but it will make your note so much better!</p>
+        <p>Attention: You can upload only one image per note and it should be under 1.5Mb.</p>
       </div>
       <% if @note.image.url != "/images/original/missing.png" %>
         <%= image_tag @note.image.url(:thumb), class: "img-responsive" %>

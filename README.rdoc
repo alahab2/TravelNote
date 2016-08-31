@@ -35,9 +35,9 @@ https://www.sitepoint.com/uploading-files-with-paperclip/
 
 16. Fix navbar - DONE
 
-17. Paperclip warning when wrong filesize, add filesize text in the form
+17. Paperclip warning when wrong filesize, add filesize text in the form - DONE
 
-18. Implement Masonry plugin
+18. Implement Masonry plugin - DONE
 
-19. Add delete image option on edit note
+19. Add delete image option on edit note - DONE
 

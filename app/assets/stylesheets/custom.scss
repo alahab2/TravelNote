@@ -166,9 +166,9 @@ body {
 	.noteContainer {
 		padding: 10px;
 		.innerNoteContainer {
-			padding: 10px;
+			padding: 10px 10px 45px 10px;
 			border: 1px solid $blue;
-			height: 290px;
+			//max-height: 600px;
 			overflow: hidden;
 			position: relative;
 			//background-color: $lightblue;
