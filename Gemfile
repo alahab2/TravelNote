@@ -5,9 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 
-gem 'pg', group: :production # Added postgres and made it production only.
-# Use SCSS for stylesheets
-gem 'rails_12factor'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 gem 'devise', '3.4.1'
 
