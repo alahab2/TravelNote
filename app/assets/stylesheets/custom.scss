@@ -168,11 +168,15 @@ body {
 
 		.innerNoteContainer {
 			padding: 10px;
-			border: 1px solid rgba(0,0,0,0.2);
+			border: 1px solid $blue;
 			height: 290px;
 			overflow: hidden;
 			position: relative;
-			background-color: $lightblue;
+			//background-color: $lightblue;
+			.notePreviewMainPage {
+				//display: block;
+				
+			}
 			h1, 
 			#author  {
 				text-align: center;
@@ -189,6 +193,12 @@ body {
 	
 			}
 		}
+	}
+
+	.noNotesYetMessage {
+		border: 1px solid $blue;
+		padding: 2rem;
+		text-align: center;
 	}
 }
 

@@ -20,10 +20,14 @@
 <% if @notes.size > 0 %>
 <% @notes.each do |note| %>
   <div class="noteContainer col-xs-12 col-sm-6 col-md-4">
+    <% if note.image.url != "/images/original/missing.png" %>
+      <%= image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
+    <% end %>
     <div class="innerNoteContainer">
-      <h1><%= note.title.truncate(80) %></h1> 
+      <h1><%= note.title.truncate(45) %></h1> 
       <p class="pageTitle"><%= note.location %></p>
       
+      <p><%= raw(note.text.truncate(150)) %></p> 
       
       <div class="metaInfo">
         <%= link_to 'Show Full Note', note %> 

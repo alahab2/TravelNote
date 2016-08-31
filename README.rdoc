@@ -8,7 +8,7 @@ https://github.com/typekit/webfontloader  - make fonts load asynchronyously
   
 3. "New Note" button on Main page, toggle link_to if logged in or not - DONE
 
-4. Click on the Note div to read full Note
+4. Click on the Note div to read full Note - NO
 
 5. Add geolocation
 
@@ -29,11 +29,13 @@ https://www.sitepoint.com/uploading-files-with-paperclip/
 
 13. New Note button from main page move to Jumbotron - DONE
 
-14. Show note imge tag only if file exists
+14. Show note imge tag only if file exists - DONE
 
 15. New note typo upload file - DONE
 
 16. Fix navbar - DONE
 
 17. Paperclip warning when wrong filesize, add filesize text in the form
+
+18. Implement Masonry plugin
 

@@ -1,15 +1,18 @@
-<h1>Hi <%= current_user.name %>!</h1>
+<h1>Hi <%= current_user.name %>! Here are your notes:</h1>
 <%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
 
 <div class="row">
 <% if @user_notes.size > 0 %>
 <% @user_notes.each do |note| %>
 
-  <div class="noteContainer col-xs-12 col-sm-6 col-md-4">
+  <div class="noteContainer col-xs-12 col-sm-6">
+    <% if note.image.url != "/images/original/missing.png" %>
+      <%= image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
+    <% end %>
     <div class="innerNoteContainer">
-      <h1><%= note.title %></h1>  
+      <h1><%= note.title.truncate(45) %></h1>  
       <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago<p>
-      <p><%= raw(note.text.truncate(160)) %></p>
+      <p><%= raw(note.text.truncate(150)) %></p>
       <div class="metaInfo">
         <%= note.location %><br />
         <%= link_to 'Show Full Note', note %> 
@@ -24,7 +27,7 @@
   </div>
   <% end %>
   <% else %>
-  <h1>Oooops, looks like you dont have any notes yet. Time to fix it!</h1>
+  <h1 class="noNotesYetMessage">Oooops, looks like you dont have any notes yet. Time to fix it!</h1>
   <% end %>
 </div>
 
