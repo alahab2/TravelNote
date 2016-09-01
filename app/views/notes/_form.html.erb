@@ -16,11 +16,12 @@
       <div class="field">
         <%= f.label :image %>
         <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
         <p>Attention: You can upload only one image per note and it should be under 1.5Mb.</p>
       </div>
-      <%# if @note.image.url != "/images/original/missing.png" %>
-        <%#= image_tag @note.image.url(:thumb), class: "img-responsive" %>
-      <%# end %> 
+      <% if @note.image.file.present? %>
+        <%= image_tag @note.image_url(:thumbnail), class: "img-responsive" %>
+      <% end %>
 
       <div class="field">
         <%= f.label :title %>*<br>

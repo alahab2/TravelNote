@@ -6,22 +6,28 @@
 
 <div class="row">
 	<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1">
-		<%# if @note.image.url != "/images/original/missing.png" %>
-			<%#= image_tag @note.image.url, 
-		<%# end %>
-		<%= image_tag @note.image_url(:large), class: "img-responsive" %>
+		<% if @note.image.file.present? %>
+			<%= image_tag @note.image_url(:large), class: "img-responsive" %>
+		<% end %>
+		
 	</div>
 </div>
 
 <p class="pageTitle"><%= @note.location %></p>
 
-<div class="noteText">
-	<p>
-	  <%= raw(@note.text) %>
-	</p>
-</div>
 
-<% if (user_signed_in? && (current_user.id == @note.user_id)) %>
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<% end %>
-<%= link_to 'Back to My Notes', user_path(current_user) %>
+	<div class="noteText col-xs-12 col-sm-10 col-sm-offset-1">
+		<p>
+		  <%= raw(@note.text) %>
+		</p>
+	</div>
+
+
+<div class="row col-xs-12 col-sm-10 col-sm-offset-1">
+	
+	<% if (user_signed_in? && (current_user.id == @note.user_id)) %>
+	<%= link_to 'Edit', edit_note_path(@note) %> |
+	<% end %>
+	<%= link_to 'Back to My Notes', user_path(current_user) %>
+
+</div>
