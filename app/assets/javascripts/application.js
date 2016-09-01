@@ -15,6 +15,9 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require ckeditor/init
+//= require ckeditor/plugins/notification/plugin
+//= require ckeditor/plugins/wordcount/plugin
+//= require ckeditor/config
 //= require bootstrap-sprockets
 
 //= require_tree .
