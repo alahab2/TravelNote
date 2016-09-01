@@ -8,7 +8,7 @@
 
   <div class="noteContainer grid-item col-xs-12 col-sm-6">
     <% if note.image.url != "/images/original/missing.png" %>
-      <%= image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
+      <%= cl_image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
     <% end %>
     <div class="innerNoteContainer">
       <h1><%= note.title.truncate(45) %></h1>  

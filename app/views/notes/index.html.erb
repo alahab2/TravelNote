@@ -22,7 +22,7 @@
     <% @notes.each do |note| %>
       <div class="noteContainer grid-item col-xs-12 col-sm-6 col-md-4">
         <% if note.image.file.present? %>
-          <%= image_tag note.image_url(:large), class: "img-responsive notePreviewMainPage" %>
+          <%= cl_image_tag note.image_url(:large), class: "img-responsive notePreviewMainPage" %>
         <% end %>
         <div class="innerNoteContainer">
           <h1><%= note.title.truncate(45) %></h1> 
