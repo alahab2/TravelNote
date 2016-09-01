@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: debtiw4tn
+  api_key: '325776844859353'
+  api_secret: "-Dm2CJZPK_iUkNzAa2YAPWQLajo"
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: debtiw4tn
+  api_key: '325776844859353'
+  api_secret: "-Dm2CJZPK_iUkNzAa2YAPWQLajo"
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: debtiw4tn
+  api_key: '325776844859353'
+  api_secret: "-Dm2CJZPK_iUkNzAa2YAPWQLajo"
+  enhance_image_tag: true
+  static_image_support: false

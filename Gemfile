@@ -10,6 +10,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'sqlite3'
+
 gem 'devise', '3.4.1'
 
 gem 'jquery-turbolinks'
@@ -18,7 +20,15 @@ gem 'ckeditor'
 
 gem 'paperclip'
 
+<<<<<<< HEAD
 gem 'sqlite3'
+=======
+gem 'carrierwave'
+gem 'cloudinary'
+
+gem 'file_validators'
+
+>>>>>>> cloudstorage
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -56,6 +66,10 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+<<<<<<< HEAD
  
+=======
+  
+>>>>>>> cloudstorage
 end
 
