@@ -33,7 +33,7 @@ $orange: #EA7317;
 body { 
 	padding-top: 70px;
 	font-family: "Lato";
-	padding-bottom: 4rem;
+	margin-bottom: 2rem;
 	.navbar {
 		background-color: $blue;
 		background-image: none;
@@ -166,30 +166,18 @@ body {
 	.noteContainer {
 		padding: 10px;
 		.innerNoteContainer {
-			padding: 10px 10px 45px 10px;
+			padding: 10px 10px 0 10px;
 			border: 1px solid $blue;
-			//max-height: 600px;
 			overflow: hidden;
 			position: relative;
-			//background-color: $lightblue;
-			.notePreviewMainPage {
-				//display: block;
-				
-			}
+			
 			h1, 
 			#author  {
 				text-align: center;
 			}
 			.metaInfo {
-				position: absolute;
-				bottom: 5px;
-				right: 5px;
-				margin-bottom: 1rem;
-			}
-			.timeAndUser {
-				position: absolute;
-				bottom: 5px;
-	
+				display: block;
+				text-align: right;
 			}
 		}
 	}
@@ -199,7 +187,14 @@ body {
 		padding: 2rem;
 		text-align: center;
 	}
+	footer {
+		text-align: center;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
 }
+
+
 
 
 .alert-alert {

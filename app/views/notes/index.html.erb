@@ -31,14 +31,13 @@
           <p><%= sanitize raw(note.text.truncate(150)) %></p> 
           
           <div class="metaInfo">
+            <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= note.user.name %><p>
             <%= link_to 'Show Full Note', note %> 
             <% if (user_signed_in? && (current_user.id == note.user_id)) %>
             | <%= link_to 'Edit', edit_note_path(note) %> 
             <% end %>
           </div>
-          <div class="timeAndUser">
-            <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= note.user.name %><p>
-          </div>
+          
 
         </div>
         

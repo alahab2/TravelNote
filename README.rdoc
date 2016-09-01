@@ -4,3 +4,4 @@ Enjoy the app!
 Meanwhile more work in origress:
 1. Add "delete" button when editing a note.
 2. Try to implement Geo location when creating a new note.
+3. When clicking on a name under a note, you can see a new page with that person's notes
