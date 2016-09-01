@@ -1,4 +1,7 @@
 class Note < ActiveRecord::Base
+
+  include ActiveModel::Validations
+
   validates :title,
             presence: true
 
@@ -18,6 +21,8 @@ class Note < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  validates :image, file_size: { less_than_or_equal_to: 2.megabytes },
+                     file_content_type: { allow: ['image/jpeg', 'image/png'] } 
   # has_attached_file :image,
   #                   styles: { 
   #                     thumb: ["100x100>", :jpg], 

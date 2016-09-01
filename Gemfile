@@ -23,6 +23,8 @@ gem 'paperclip'
 gem 'carrierwave'
 gem 'cloudinary'
 
+gem 'file_validators'
+
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
