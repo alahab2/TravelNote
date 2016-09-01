@@ -18,7 +18,7 @@
 
 	<div class="noteText col-xs-12 col-sm-10 col-sm-offset-1">
 		<p>
-		  <%= raw(@note.text) %>
+		  <%= sanitize raw @note.text %>
 		</p>
 	</div>
 

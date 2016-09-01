@@ -28,7 +28,7 @@
           <h1><%= note.title.truncate(45) %></h1> 
           <p class="pageTitle"><%= note.location %></p>
           
-          <p><%= raw(note.text.truncate(150)) %></p> 
+          <p><%= sanitize raw(note.text.truncate(150)) %></p> 
           
           <div class="metaInfo">
             <%= link_to 'Show Full Note', note %> 

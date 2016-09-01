@@ -13,7 +13,7 @@
     <div class="innerNoteContainer">
       <h1><%= note.title.truncate(45) %></h1>  
       <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago<p>
-      <p><%= raw(note.text.truncate(150)) %></p>
+      <p><%= sanitize raw(note.text.truncate(150)) %></p>
       <div class="metaInfo">
         <%= note.location %><br />
         <%= link_to 'Show Full Note', note %> 
