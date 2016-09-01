@@ -1,6 +1,6 @@
 
-There is an Isotope JQuery plugin that's supposed to be working when displaying multiple notes per page. It's working locally, but not on Heroku.
-Work in progress.
+Enjoy the app!
 
-More stuff to do:
+Meanwhile more work in origress:
 1. Add "delete" button when editing a note.
+2. Try to implement Geo location when creating a new note.
