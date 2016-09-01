@@ -1,7 +1,6 @@
-
-Enjoy the app!
-
-Meanwhile more work in origress:
-1. Add "delete" button when editing a note.
-2. Try to implement Geo location when creating a new note.
-3. When clicking on a name under a note, you can see a new page with that person's notes
+With this app you can:
+- Sign Up and Log In
+- Modify your profile
+- Create a Travel Note with an image and a nicely formatted text attached
+- Modify your notes
+- Find all your notes in your personal "My Notes" page
