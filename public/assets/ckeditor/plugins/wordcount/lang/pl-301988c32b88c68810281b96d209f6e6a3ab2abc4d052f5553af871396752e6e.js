@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","pl",{WordCount:"S\u0142\xf3w:",CharCount:"Znak\xf3w:",CharCountWithHTML:"Znak\xf3w (wraz z kodem HTML):",Paragraphs:"Paragraphs:",pasteWarning:"Content can not be pasted because it is above the allowed limit",Selected:"Selected: ",title:"Statystyka"});

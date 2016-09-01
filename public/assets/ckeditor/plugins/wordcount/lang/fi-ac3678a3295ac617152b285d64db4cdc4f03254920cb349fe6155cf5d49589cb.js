@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","fi",{WordCount:"Sanoja:",CharCount:"Merkkej\xe4:",CharCountWithHTML:"Merkkej\xe4 (ml. HTML):",Paragraphs:"Kappaleita:",pasteWarning:"Sis\xe4lt\xf6\xe4 ei voida liitt\xe4\xe4, koska se ylitt\xe4\xe4 sallitun rajan.",Selected:"Valittuna: ",title:"Statistiikkaa"});

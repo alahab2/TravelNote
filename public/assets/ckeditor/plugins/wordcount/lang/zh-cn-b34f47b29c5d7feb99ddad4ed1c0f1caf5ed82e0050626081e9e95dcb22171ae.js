@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","zh-cn",{WordCount:"\u8bcd\u6570:",CharCount:"\u5b57\u7b26:",CharCountWithHTML:"\u5b57\u7b26 (\u542bHTML)",Paragraphs:"\u6bb5\u843d:",pasteWarning:"\u7531\u4e8e\u4e0a\u9650\u5141\u8bb8,\u5185\u5bb9\u4e0d\u80fd\u7c98\u8d34",Selected:"\u5df2\u9009\u62e9: ",title:"\u7edf\u8ba1"});

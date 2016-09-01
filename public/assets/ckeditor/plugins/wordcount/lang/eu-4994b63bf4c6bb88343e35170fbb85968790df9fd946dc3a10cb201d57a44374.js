@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","eu",{WordCount:"Hitzak:",CharCount:"Karaktereak:",CharCountWithHTML:"Karaktereak (HTMLarekin):",Paragraphs:"Paragrafoak:",pasteWarning:"Ezin da edukia itsatsi, onartutako muga gainditu duelako",Selected:"Hautatuta: ",title:"Estatistikak"});

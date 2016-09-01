@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","pt",{WordCount:"Palavras:",CharCount:"Caracteres:",CharCountWithHTML:"Carateres (incluindo HTML):",Paragraphs:"Par\xe1grafos:",pasteWarning:"O conte\xfado n\xe3o pode ser colado porque ultrapassa o limite permitido",Selected:"Selecionado: ",title:"Estat\xedsticas"});

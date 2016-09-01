@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","es",{WordCount:"Palabras:",CharCount:"Car\xe1cteres:",CharCountWithHTML:"Car\xe1cteres (con HTML):",Paragraphs:"P\xe1rrafos:",pasteWarning:"El contenido no se puede pegar, ya que se encuentra fuera del l\xedmite permitido",Selected:"Seleccionado: ",title:"Estad\xedsticas"});

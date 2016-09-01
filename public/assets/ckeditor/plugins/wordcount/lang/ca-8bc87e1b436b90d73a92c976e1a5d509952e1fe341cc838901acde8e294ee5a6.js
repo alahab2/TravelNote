@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","ca",{WordCount:"Paraules:",CharCount:"Car\xe0cters:",CharCountWithHTML:"Car\xe0cters (including HTML):",Paragraphs:"Paragraphs:",pasteWarning:"Content can not be pasted because it is above the allowed limit",Selected:"Selected: ",title:"Estad\xedstiques"});

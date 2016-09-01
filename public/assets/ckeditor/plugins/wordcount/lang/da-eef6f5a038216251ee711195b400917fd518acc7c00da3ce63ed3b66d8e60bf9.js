@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","da",{WordCount:"Ord:",CharCount:"Karakterer:",CharCountWithHTML:"Karakterer (med HTML):",Paragraphs:"Afsnit:",pasteWarning:"Indholdet kan ikke inds\xe6ttes da det er l\xe6ngere end den tilladte gr\xe6nse.",Selected:"Markeret: ",title:"Statistik"});

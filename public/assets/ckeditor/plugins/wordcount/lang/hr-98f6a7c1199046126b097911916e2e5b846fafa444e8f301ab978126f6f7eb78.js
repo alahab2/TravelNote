@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","hr",{WordCount:"Rije\u010di:",CharCount:"Znakova:",CharCountWithHTML:"Znakova (uklju\u010duju\u0107i HTML):",Paragraphs:"Paragraphs:",pasteWarning:"Content can not be pasted because it is above the allowed limit",Selected:"Selected: ",title:"Statistika"});

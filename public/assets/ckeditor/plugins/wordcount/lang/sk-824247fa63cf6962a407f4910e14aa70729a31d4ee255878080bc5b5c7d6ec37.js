@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("wordcount","sk",{WordCount:"Slov:",CharCount:"Znakov:",CharCountWithHTML:"Znakov (vr\xe1tane HTML):",Paragraphs:"Odstavcov:",pasteWarning:"Obsah sa ned\xe1 prilepi\u0165.",Selected:"V\xfdber: ",title:"\u0160tatistika"});
