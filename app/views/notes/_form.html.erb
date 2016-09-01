@@ -36,6 +36,11 @@
         <%= f.label :text %>*<br>
         <%= f.cktext_area :text, class: 'form-control editor-field' %>
       </div>
+      <div class="field">
+        <%= f.check_box :private %>
+        <%= f.label :private, "Make this Note private." %>
+      </div>
+
       <div class="actions">
         <%= f.submit class: 'btn new-note-btn'%>
       </div>

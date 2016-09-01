@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160901061655) do
+ActiveRecord::Schema.define(version: 20160901145839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20160901061655) do
     t.string   "title"
     t.string   "location"
     t.text     "text"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.string   "asset_file_name"
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160901061655) do
     t.datetime "image_updated_at"
     t.string   "image"
     t.integer  "user_id"
+    t.boolean  "private",            default: false
   end
 
   create_table "users", force: :cascade do |t|

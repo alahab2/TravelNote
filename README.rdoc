@@ -1,6 +1,7 @@
 With this app you can:
-- Sign Up and Log In
-- Modify your profile
-- Create a Travel Note with an image and a nicely formatted text attached
-- Modify your notes
-- Find all your notes in your personal "My Notes" page
+- Sign Up and Log In.
+- Modify your profile.
+- Create a Travel Note with an image and a nicely formatted text attached.
+- Modify your notes.
+- Find all your notes in your personal "My Notes" page, sorted DESC by time_updated.
+- Make a note "Private". Then it won't appear on the main page, only you will see it in your "Ma Notes" page.

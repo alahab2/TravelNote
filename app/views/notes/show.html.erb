@@ -22,9 +22,8 @@
 		</p>
 	</div>
 
-
 <div class="row col-xs-12 col-sm-10 col-sm-offset-1">
-	
+	<p><em>This note is Private.</em></p>
 	<% if (user_signed_in? && (current_user.id == @note.user_id)) %>
 	<%= link_to 'Edit', edit_note_path(@note) %> |
 	<% end %>

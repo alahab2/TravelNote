@@ -20,28 +20,27 @@
   <div class="grid">
     <% if @notes.size > 0 %>
     <% @notes.each do |note| %>
-      <div class="noteContainer grid-item col-xs-12 col-sm-6 col-md-4">
-        <% if note.image.file.present? %>
-          <%= cl_image_tag note.image_url(:large), class: "img-responsive notePreviewMainPage" %>
-        <% end %>
-        <div class="innerNoteContainer">
-          <h1><%= note.title.truncate(45) %></h1> 
-          <p class="pageTitle"><%= note.location %></p>
-          
-          <p><%= sanitize raw(note.text.truncate(150)) %></p> 
-          
-          <div class="metaInfo">
-            <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= note.user.name %><p>
-            <%= link_to 'Show Full Note', note %> 
-            <% if (user_signed_in? && (current_user.id == note.user_id)) %>
-            | <%= link_to 'Edit', edit_note_path(note) %> 
-            <% end %>
+      <% if note.private == false %>
+        <div class="noteContainer grid-item col-xs-12 col-sm-6 col-md-4">
+          <% if note.image.file.present? %>
+            <%= cl_image_tag note.image_url(:large), class: "img-responsive notePreviewMainPage" %>
+          <% end %>
+          <div class="innerNoteContainer">
+            <h1><%= note.title.truncate(45) %></h1> 
+            <p class="pageTitle"><%= note.location %></p>
+            
+            <p><%= sanitize raw(note.text.truncate(150)) %></p> 
+            
+            <div class="metaInfo">
+              <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= note.user.name %><p>
+              <%= link_to 'Show Full Note', note %> 
+              <% if (user_signed_in? && (current_user.id == note.user_id)) %>
+              | <%= link_to 'Edit', edit_note_path(note) %> 
+              <% end %>
+            </div>
           </div>
-          
-
         </div>
-        
-      </div>
+      <% end %>
     <% end %>
     <% else %>
     <h1 class="noNotesYetMessage">Oooops, looks like there are no notes yet.</h1>
