@@ -19,6 +19,8 @@ gem 'paperclip'
 gem 'carrierwave'
 gem 'cloudinary'
 
+gem "font-awesome-rails"
+
 gem 'file_validators'
 
 gem 'bootstrap-sass', '~> 3.3.6'

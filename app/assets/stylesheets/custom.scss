@@ -18,6 +18,7 @@ $blue: darken(#2364AA, 5%);
 $lightblue: #5AABC8;
 $yellow: #FFE900;
 $orange: #EA7317;
+$red: #C1292E;
 
 @mixin navColor($color) {
 
@@ -175,10 +176,17 @@ body {
 			#author  {
 				text-align: center;
 			}
+			.noteIcons {
+				position: absolute;
+				left: 10px;
+				bottom: 0;
+				color: $red;
+			}
 			.metaInfo {
 				display: block;
 				text-align: right;
 			}
+
 		}
 	}
 
