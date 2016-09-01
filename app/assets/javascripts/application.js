@@ -29,4 +29,8 @@ $(window).load(function(){
     itemSelector: '.grid-item',
     layoutMode: 'masonry'
   });
+
+  $("[data-toggle='tooltip']").tooltip();
+  $("[data-toggle='popover']").popover({trigger: "click"});
 });
+
