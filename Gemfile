@@ -5,12 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
-
-gem 'sqlite3'
+gem 'pg'
+gem 'rails_12factor'
 
 gem 'devise', '3.4.1'
 
