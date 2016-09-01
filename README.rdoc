@@ -1,43 +1,6 @@
-To do:
 
-1. Custom fonts
-http://www.1001freefonts.com/
-https://github.com/typekit/webfontloader  - make fonts load asynchronyously
+There is an Isotope JQuery plugin that's supposed to be working when displaying multiple notes per page. It's working locally, but not on Heroku.
+Work in progress.
 
-2. Edit and Delete function only for your own  - DONE
-  
-3. "New Note" button on Main page, toggle link_to if logged in or not - DONE
-
-4. Click on the Note div to read full Note - NO
-
-5. Add geolocation
-
-6. Add when note was published - DONE
-
-7. CHange burger in the menu - DONE 
-
-8. Change profile name when dropsown clicked - DONE
-
-9. Add image loading and image disply on note page
-https://www.sitepoint.com/uploading-files-with-paperclip/
-
-10. Change form Location field to country with dropdown
-
-11. Add City field to form, not required
-
-12. Limit number of characters in note title 
-
-13. New Note button from main page move to Jumbotron - DONE
-
-14. Show note imge tag only if file exists - DONE
-
-15. New note typo upload file - DONE
-
-16. Fix navbar - DONE
-
-17. Paperclip warning when wrong filesize, add filesize text in the form - DONE
-
-18. Implement Masonry plugin - DONE
-
-19. Add delete image option on edit note - DONE
-
+More stuff to do:
+1. Add "delete" button when editing a note.
