@@ -36,7 +36,7 @@ $black: #484848;
 body { 
 	padding-top: 70px;
 	font-family: "Lato";
-	margin-bottom: 2rem;
+	// margin-bottom: 2rem;
 	background-color: darken($lightgrey, 6%);
 	color: $black;
 	.navbar {
@@ -201,6 +201,9 @@ body {
 		}
 		
 	}
+	.pageContent {
+		min-height: calc(100vh - 100px);
+	}
 
 	.noNotesYetMessage {
 		border: 1px solid $blue;
@@ -209,8 +212,9 @@ body {
 	}
 	footer {
 		text-align: center;
-		margin-bottom: 2rem;
-		margin-top: 2rem;
+		//position: absolute;
+		// bottom: 10px;
+		width: 100%;
 	}
 }
 
