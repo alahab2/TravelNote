@@ -23,7 +23,9 @@
 	</div>
 
 <div class="row col-xs-12 col-sm-10 col-sm-offset-1">
-	<p class="privateNote">This note is Private <i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="popover" data-trigger="focus" title="Private Note" data-content="It won't be published on the main page. But you can always find it on your 'My Notes' page."></i></p>
+	<% if @note.private == true %>
+		<p class="privateNote">This note is Private <i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="popover" data-trigger="focus" title="Private Note" data-content="It won't be published on the main page. But you can always find it on your 'My Notes' page."></i></p>
+	<% end %>
 	<% if (user_signed_in? && (current_user.id == @note.user_id)) %>
 	<%= link_to 'Edit', edit_note_path(@note) %> |
 	<% end %>

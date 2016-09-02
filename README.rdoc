@@ -5,3 +5,5 @@ With this app you can:
 - Modify your notes.
 - Find all your notes in your personal "My Notes" page, sorted DESC by time_updated.
 - Make a note "Private". Then it won't appear on the main page, only you will see it on your "My Notes" page.
+
+PRIBATE STATE IS NOT CHENGING ON HEROKU
