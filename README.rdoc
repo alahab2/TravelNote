@@ -5,3 +5,5 @@ With this app you can:
 - Modify your notes.
 - Find all your notes on your personal "My Notes" page.
 - Make a note "Private". Then it won't appear on the main page, but you will see it on your "My Notes" page.
+
+Fully responsive.
