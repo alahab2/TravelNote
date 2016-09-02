@@ -19,6 +19,7 @@ $lightblue: #5AABC8;
 $yellow: #FFE900;
 $orange: #EA7317;
 $red: #C1292E;
+$lightgrey: #F6F4D2;
 
 @mixin navColor($color) {
 
@@ -166,28 +167,35 @@ body {
 	}
 	.noteContainer {
 		padding: 10px;
-		.innerNoteContainer {
-			padding: 10px 10px 0 10px;
-			border: 1px solid $blue;
-			overflow: hidden;
-			position: relative;
-			
-			h1, 
-			#author  {
-				text-align: center;
-			}
-			.noteIcons {
-				position: absolute;
-				left: 10px;
-				bottom: 0;
-				color: $red;
-			}
-			.metaInfo {
-				display: block;
-				text-align: right;
+		.shadowContainer {
+			box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+			.innerNoteContainer {
+				padding: 10px 10px 0 10px;
+				//border: 1px solid $blue;
+				overflow: hidden;
+				position: relative;
+				background-color: $lightgrey;
+				//box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+				h1, 
+				#author  {
+					text-align: center;
+				}
+				.noteIcons {
+					position: absolute;
+					left: 10px;
+					bottom: 10px;
+					color: $red;
+				}
+				.metaInfo {
+					display: block;
+					text-align: right;
+					padding-bottom: 10px;
+				}
+
 			}
 
 		}
+		
 	}
 
 	.noNotesYetMessage {

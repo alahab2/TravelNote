@@ -7,29 +7,32 @@
 <% @user_notes.each do |note| %>
 
   <div class="noteContainer grid-item col-xs-12 col-sm-6">
-    <% if note.image.url != "/images/original/missing.png" %>
-      <%= cl_image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
-    <% end %>
-    <div class="innerNoteContainer">
-      <h1><%= note.title.truncate(45) %></h1>  
-      <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago<p>
-      <p><%= sanitize raw(note.text.truncate(150)) %></p>
-
-      <% if note.private == true %>
-      <div class="noteIcons">
-        <i class="fa fa-ban" aria-hidden="true"></i> Private
-      </div>
+    <div class="shadowContainer">
+      <% if note.image.url != "/images/original/missing.png" %>
+        <%= cl_image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
       <% end %>
-      <div class="metaInfo">
-        <%= note.location %><br />
-        <%= link_to 'Show Full Note', note %> 
+      <div class="innerNoteContainer">
+        
+        <h1><%= note.title.truncate(45) %></h1>  
+        <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago<p>
+        <p><%= sanitize raw(note.text.truncate(150)) %></p>
 
-        <% if (user_signed_in? && (current_user.id == note.user_id)) %>
-        | <%= link_to 'Edit', edit_note_path(note) %> 
-        | <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% if note.private == true %>
+        <div class="noteIcons">
+          <i class="fa fa-ban" aria-hidden="true"></i> Private
+        </div>
         <% end %>
-      </div>
+        <div class="metaInfo">
+          <%= note.location %><br />
+          <%= link_to 'Show Full Note', note %> 
 
+          <% if (user_signed_in? && (current_user.id == note.user_id)) %>
+          | <%= link_to 'Edit', edit_note_path(note) %> 
+          | <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+
+      </div>
     </div>
   </div>
   <% end %>
