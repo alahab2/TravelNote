@@ -19,7 +19,8 @@ $lightblue: #5AABC8;
 $yellow: #FFE900;
 $orange: #EA7317;
 $red: #C1292E;
-$lightgrey: #F6F4D2;
+$lightgrey: #EDFFF5;
+$black: #484848;
 
 @mixin navColor($color) {
 
@@ -36,6 +37,8 @@ body {
 	padding-top: 70px;
 	font-family: "Lato";
 	margin-bottom: 2rem;
+	background-color: darken($lightgrey, 2%);
+	color: $black;
 	.navbar {
 		background-color: $blue;
 		background-image: none;
@@ -132,6 +135,7 @@ body {
 		border: 1px solid $blue;
 		//padding: 1rem;
 		margin-bottom: 2rem;
+		background-color: $lightgrey;
 	}
 
 	.field {
@@ -168,10 +172,10 @@ body {
 	.noteContainer {
 		padding: 10px;
 		.shadowContainer {
-			box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+			//box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
 			.innerNoteContainer {
 				padding: 10px 10px 0 10px;
-				//border: 1px solid $blue;
+				border: 1px solid $blue;
 				overflow: hidden;
 				position: relative;
 				background-color: $lightgrey;
