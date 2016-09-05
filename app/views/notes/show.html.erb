@@ -2,7 +2,7 @@
   <%= @note.title %>
 </h1>
 
-<p class="pageTitle">by <%= @note.user.name %></p>
+<p class="pageTitle">by <%= link_to @note.user.name , user_path(@note.user) %></p>
 
 <div class="row">
 	<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1">
