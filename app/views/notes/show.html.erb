@@ -28,9 +28,7 @@
 	<% end %>
 	<% if (user_signed_in? && (current_user.id == @note.user_id)) %>
 	<%= link_to 'Edit', edit_note_path(@note) %> |
-	<% end %>
-	<% if (user_signed_in?) %>
-		<%= link_to 'Back to My Notes', user_path(current_user) %>
+	<%= link_to 'Back to My Notes', user_path(current_user) %>
 	<% end %>	
 
 </div>
