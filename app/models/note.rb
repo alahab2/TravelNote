@@ -17,7 +17,6 @@ class Note < ActiveRecord::Base
   #     self.user_id = current_user.id
   # end
 
-  
 
   mount_uploader :image, ImageUploader
 
