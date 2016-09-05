@@ -12,11 +12,32 @@
 </div>
 <% end %>
 
+<h1 class="pageTitle ">Keep it simple. This is not Facebook.</h1>
+<div class="row appExplanation pageTitle col-xs-12">
+  <div class="col-xs-3">
+    <i class="fa fa-picture-o" aria-hidden="true"></i>
+    <p>One Image</p>
+  </div>
+  <div class="col-xs-3">
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+    <p>One Location</p>
+  </div>
+  <div class="col-xs-3">
+    <i class="fa fa-comment-o" aria-hidden="true"></i>
+    <p>One Subject</p>
+  </div>
+  <div class="col-xs-3">
+    <i class="fa fa-align-center" aria-hidden="true"></i>
+    <p>150 Words</p>
+  </div>
+</div>
 
-<h1 class="pageTitle">Notes from all over the world</h1>
+
+
 
  
 <div class="row mainPageRow">
+<h1 class="pageTitle">Explore Notes from all over the world</h1>
   <div class="grid">
     <% if @notes.size > 0 %>
     <% @notes.each do |note| %>
