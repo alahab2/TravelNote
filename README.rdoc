@@ -5,11 +5,11 @@ With this app you can:
 - Modify your notes.
 - Find all your notes on your personal "My Notes" page.
 - Make a note "Private". Then it won't appear on the main page, but you will see it on your "My Notes" page.
+- Click on a name of a Note Aouthor on the main page and see his/her profile with Public notes.
 
 Fully responsive.
 
 TO DO 
 
 1. Comments on Notes
-2. Personal pages when clicking on a person name
 3. Infinite scroll on main page and show my notes page
