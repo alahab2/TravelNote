@@ -13,4 +13,4 @@ Fully responsive.
 TO DO 
 
 1. Comments on Notes
-3. Infinite scroll on main page and show my notes page
+
