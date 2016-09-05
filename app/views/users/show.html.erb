@@ -2,7 +2,7 @@
 <h1>Hi <%= current_user.name %>! Here are your notes:</h1>
 <%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
 <% else %>
-<h1><%= @user.name %>'s Profile</h1>
+<h1><%= @user.name %>'s Notes:</h1>
 <% end %>
 
 <div class="row">
@@ -10,33 +10,9 @@
     <% if @user_notes.size > 0 %>
       <% @user_notes.each do |note| %>
         <% if @user != current_user && note.private == false %>
-          <div class="noteContainer grid-item col-xs-12 col-sm-6">
-            <div class="shadowContainer">
-              <% if note.image.url != "/images/original/missing.png" %>
-                <%= cl_image_tag note.image.url, class: "img-responsive notePreviewMainPage" %>
-              <% end %>
-              <div class="innerNoteContainer">
-                
-                <h1><%= note.title.truncate(45) %></h1>  
-                <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago</p>
-                <p><%= sanitize raw(note.text.truncate(150)) %></p>
-
-                <% if note.private == true %>
-                  <div class="noteIcons">
-                    <i class="fa fa-ban" aria-hidden="true"></i> Private
-                  </div>
-                <% end %>
-                <div class="metaInfo">
-                  <%= note.location %><br />
-                  <%= link_to 'Show Full Note', note %> 
-                  <% if (user_signed_in? && (current_user.id == note.user_id)) %>
-                  | <%= link_to 'Edit', edit_note_path(note) %> 
-                  | <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' } %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
+          <%= render 'note', note: note %>
+        <% elsif @user == current_user %>
+          <%= render 'note', note: note %>
         <% end %>
       <% end %>
     <% else %>
