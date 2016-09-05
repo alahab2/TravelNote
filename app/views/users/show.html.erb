@@ -1,4 +1,4 @@
-<% if @user == current_user %>
+<% if (user_signed_in?) && @user == current_user %>
 <h1>Hi <%= current_user.name %>! Here are your notes:</h1>
 <%= link_to 'New Note', new_note_path, class: "btn btn-warning new-note-btn" %>
 <% else %>
@@ -9,9 +9,9 @@
   <div class="grid">
     <% if @user_notes.size > 0 %>
       <% @user_notes.each do |note| %>
-        <% if @user != current_user && note.private == false %>
+        <% if (!user_signed_in? || @user != current_user) && note.private == false %>
           <%= render 'note', note: note %>
-        <% elsif @user == current_user %>
+        <% elsif (user_signed_in?) && @user == current_user %>
           <%= render 'note', note: note %>
         <% end %>
       <% end %>
