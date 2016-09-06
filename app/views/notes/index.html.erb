@@ -51,9 +51,9 @@
               
               <div class="metaInfo">
                 <% if note.city.presence || note.country.presence %>    
-                  <%= note.city if note.city.presence %>, <%= note.country if note.country.presence %></p>
+                  <p><%= note.city if note.city.presence %>, <%= note.country if note.country.presence %></p>
                 <% else %>
-                  <%= note.location %>  
+                  <p><%= note.location %></p> 
                 <% end %>
                 <%= link_to 'Show Full Note', note %> 
                 <% if (user_signed_in? && (current_user.id == note.user_id)) %>
