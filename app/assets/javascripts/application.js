@@ -33,6 +33,8 @@ $(window).load(function(){
   $("[data-toggle='tooltip']").tooltip();
   $("[data-toggle='popover']").popover({trigger: "click"});
 
-  $("#geocomplete").geocomplete();
+  $("#geocomplete").geocomplete({
+  	types: ['(cities)']
+  });
 });
 
