@@ -41,6 +41,7 @@ class Note < ActiveRecord::Base
   reverse_geocoded_by :latitude, :longitude do |obj,results|
     if geo = results.first
       obj.country = geo.country
+      obj.city = geo.city
     end
   end
   after_validation :reverse_geocode
