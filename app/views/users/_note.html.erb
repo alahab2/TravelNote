@@ -15,7 +15,9 @@
         </div>
       <% end %>
       <div class="metaInfo">
-        <%= note.location %><br />
+        <% if note.city.presence || note.country.presence %>
+          <%= note.city if note.city.presence %>, <%= note.country if note.country.presence %><br />
+        <% end %>
         <%= link_to 'Show Full Note', note %> 
         <% if (user_signed_in? && (current_user.id == note.user_id)) %>
         | <%= link_to 'Edit', edit_note_path(note) %> 

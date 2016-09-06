@@ -34,10 +34,19 @@
 
 <div class="row mainPageRow">
 <h1 class="pageTitle exploreNotes">Explore Notes from all over the world</h1>
+<%= form_for(@notes[0]) do |f| %>
+      <%= f.country_select(:country, { include_blank: 'All Countries' }, {class: "form-control"}) %>
+<% end %>
+
   <div class="grid">
     <% if @notes.size > 0 %>
+    
+
     <% @notes.each do |note| %>
       <% if note.private == false %>
+
+        
+
         <div class="noteContainer grid-item col-xs-12 col-sm-6 col-md-4">
           <div class="shadowContainer">
             <% if note.image.file.present? %>
@@ -45,8 +54,10 @@
             <% end %>
             <div class="innerNoteContainer">
               <h1><%= note.title.truncate(45) %></h1> 
-              <p class="pageTitle"><%= note.location %></p>
-              
+              <p class="pageTitle">
+                <% if note.city.presence || note.country.presence %>    
+                  <%= note.city if note.city.presence %>, <%= note.country if note.country.presence %></p>
+                <% end %>
               <p><%= sanitize raw(note.text.truncate(150)) %></p> 
               
               <div class="metaInfo">
