@@ -35,4 +35,7 @@ class Note < ActiveRecord::Base
   #                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
   #                      size: { in: 0..1500.kilobytes }
 
+  geocoded_by :location
+  after_validation :geocode, if: ->(obj){ obj.location.present? and obj.location_changed? }
+
 end
