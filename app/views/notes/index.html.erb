@@ -45,16 +45,16 @@
             <% end %>
             <div class="innerNoteContainer">
               <h1><%= note.title.truncate(45) %></h1> 
-              <p class="pageTitle">
+                <p class="pageTitle"> <%= time_ago_in_words(note.updated_at) %> ago by <%= link_to note.user.name , user_path(note.user) %></p>
+                
+              <p><%= sanitize raw(note.text.truncate(150)) %></p> 
+              
+              <div class="metaInfo">
                 <% if note.city.presence || note.country.presence %>    
                   <%= note.city if note.city.presence %>, <%= note.country if note.country.presence %></p>
                 <% else %>
                   <%= note.location %>  
                 <% end %>
-              <p><%= sanitize raw(note.text.truncate(150)) %></p> 
-              
-              <div class="metaInfo">
-                <p id="timeCreated"> <%= time_ago_in_words(note.updated_at) %> ago by <%= link_to note.user.name , user_path(note.user) %><p>
                 <%= link_to 'Show Full Note', note %> 
                 <% if (user_signed_in? && (current_user.id == note.user_id)) %>
                 | <%= link_to 'Edit', edit_note_path(note) %> 
