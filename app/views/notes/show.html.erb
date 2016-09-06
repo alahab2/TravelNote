@@ -14,7 +14,15 @@
 </div>
 
 <p class="pageTitle"><%= @note.location %></p>
-<p>Coordinates: <%= @note.latitude %>, <%= @note.longitude %></p>
+
+<div class="row">
+	<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1">
+		<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@note.latitude},#{@note.longitude}&markers=#{@note.latitude},#{@note.longitude}&zoom=5&size=320x200&key=AIzaSyAOamhfl-R-mtvC7zG8pyXwLkgHJQrwGl0",
+	          class: 'staticMap img-responsive', alt: "#{@note.title} on the map"%>
+
+	</div>
+</div>
+
 
 
 	<div class="noteText col-xs-12 col-sm-10 col-sm-offset-1">

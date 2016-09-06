@@ -10,6 +10,9 @@ With this app you can:
 
 Fully responsive.
 
+
+!!!HAD TO TURN OFF PAGINATION ON MY NOTES
+
 TO DO 
 
 1. Comments on Notes
