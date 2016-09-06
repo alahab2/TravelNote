@@ -2,7 +2,7 @@ With this app you can:
 - Sign Up and Log In.
 - Modify your profile.
 - Create a Travel Note with an image and a nicely formatted text attached. Notice, that "Location" field uses Google Places Autocomplete. 
-- When looking at a Note in a "Show Full Note" mode, you can see a stitic map with the location of your Note.
+- When looking at a Note in a "Show Full Note" mode, you can see a static map with the location of your Note.
 - Modify your notes.
 - Find all your notes on your personal "My Notes" page.
 - Make a note "Private". Then it won't appear on the main page, but you will see it on your "My Notes" page.
