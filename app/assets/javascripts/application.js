@@ -34,7 +34,7 @@ $(window).load(function(){
   $("[data-toggle='popover']").popover({trigger: "click"});
 
   $("#geocomplete").geocomplete({
-  	types: ['(cities)']
+  	//types: ['(cities)']
   });
 });
 

@@ -13,24 +13,20 @@
 	</div>
 </div>
 
-<p class="pageTitle">
-<% if @note.city.presence || @note.country.presence %>	
-	<%= @note.city if @note.city.presence %>, <%= @note.country if @note.country.presence %></p>
-<% end %>
-	<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1">
-		<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@note.latitude},#{@note.longitude}&markers=#{@note.latitude},#{@note.longitude}&zoom=5&size=320x200&key=AIzaSyBtky2vEg3OiQ80-JwbD-zpbNna52fidk4",
-	          class: 'staticMap img-responsive', alt: "#{@note.title} on the map"%>
+<p class="pageTitle"><%= @note.location %> </p>
 
-	</div>
+<div class="imageContainer col-xs-12 col-sm-10 col-sm-offset-1">
+	<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@note.latitude},#{@note.longitude}&markers=#{@note.latitude},#{@note.longitude}&zoom=5&size=320x200&key=AIzaSyBtky2vEg3OiQ80-JwbD-zpbNna52fidk4",
+          class: 'staticMap img-responsive', alt: "#{@note.title} on the map"%>
+
+</div>
 
 
-
-
-	<div class="noteText col-xs-12 col-sm-10 col-sm-offset-1">
-		<p>
-		  <%= sanitize raw @note.text %>
-		</p>
-	</div>
+<div class="noteText col-xs-12 col-sm-10 col-sm-offset-1">
+	<p>
+	  <%= sanitize raw @note.text %>
+	</p>
+</div>
 
 <div class="row col-xs-12 col-sm-10 col-sm-offset-1">
 	<% if @note.private == true %>
