@@ -20,3 +20,9 @@ TO DO
 1. Comments on Notes
 2. Hide API keys for google
 
+Isotope with dropdown filter - http://jsfiddle.net/fglua/39/
+http://codepen.io/desandro/pen/jubmr
+
+Mixitup for filtering with pagination - https://mixitup.kunkalabs.com/extensions/pagination/docs/
+
+

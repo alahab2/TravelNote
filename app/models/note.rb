@@ -42,6 +42,7 @@ class Note < ActiveRecord::Base
     if geo = results.first
       obj.country = geo.country
       obj.city = geo.city
+      obj.countrycode = geo.country_code
     end
   end
   after_validation :reverse_geocode

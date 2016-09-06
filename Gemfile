@@ -29,8 +29,6 @@ gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 gem 'geocoder'
 
-gem 'country_select'
-
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
