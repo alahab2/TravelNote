@@ -48,6 +48,8 @@
               <p class="pageTitle">
                 <% if note.city.presence || note.country.presence %>    
                   <%= note.city if note.city.presence %>, <%= note.country if note.country.presence %></p>
+                <% else %>
+                  <%= note.location %>  
                 <% end %>
               <p><%= sanitize raw(note.text.truncate(150)) %></p> 
               

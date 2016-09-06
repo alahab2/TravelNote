@@ -20,6 +20,8 @@ TO DO
 1. Comments on Notes
 2. Hide API keys for google
 
+
+
 Isotope with dropdown filter - http://jsfiddle.net/fglua/39/
 http://codepen.io/desandro/pen/jubmr
 
