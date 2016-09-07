@@ -1,4 +1,4 @@
-With this app you can:
+*With this app you can:*
 - Sign Up and Log In.
 - Modify your profile.
 - Create a Travel Note with an image and a nicely formatted text attached. Notice, that "Location" field uses Google Places Autocomplete. 
@@ -9,9 +9,9 @@ With this app you can:
 - Browse other people's public notes on the main page (with Isotope layout and pagination).
 - Click on a name of a Note Author on the main page and see his/her profile with Public notes.
 
-Test account:
-bob@gmail.com
-12345678
+<em>Test account:</em>
+- bob@gmail.com
+- 12345678
 
 
 P.S. The app is fully responsive.
