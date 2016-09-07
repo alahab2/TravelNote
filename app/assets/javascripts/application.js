@@ -25,10 +25,10 @@
 
 // init Isotope
 $(window).load(function(){
-  // var $grid = $('.grid').isotope({
-  //   itemSelector: '.grid-item',
-  //   layoutMode: 'masonry'
-  // });
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'masonry'
+  });
   
 
   $("[data-toggle='tooltip']").tooltip();

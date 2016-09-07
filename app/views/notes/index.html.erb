@@ -34,11 +34,11 @@
 
 <div class="row mainPageRow">
 <h1 class="pageTitle exploreNotes">Explore Notes from all over the world</h1>
-  <div class="grid">
+  <div class="grid" id="grid">
     <% if @notes.size > 0 %>
     <% @notes.each do |note| %>
       <% if note.private == false %>
-        <div class="noteContainer grid-item col-xs-12 col-sm-6 col-md-4 <%= note.countrycode if note.countrycode.presence %> ">
+        <div class="noteContainer grid-item mix col-xs-12 col-sm-6 col-md-4 <%= note.countrycode if note.countrycode.presence %> ">
           <div class="shadowContainer">
             <% if note.image.file.present? %>
               <%= cl_image_tag note.image_url(:large), class: "img-responsive notePreviewMainPage" %>
@@ -63,6 +63,7 @@
             </div>
           </div>
         </div>
+        <div class="gap"></div>
       <% end %>
     <% end %>
     <% else %>
@@ -70,9 +71,12 @@
     <% end %>
 
   </div>
-  <!-- <div id="pagination">
-    <%#= will_paginate %>
+  <!-- <div class="pager-list">
+    Pagination buttons will be generated here
   </div> -->
+  <div id="pagination">
+    <%= will_paginate %>
+  </div>
 </div>
 
 
