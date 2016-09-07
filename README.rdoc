@@ -9,6 +9,10 @@ With this app you can:
 - Browse other people's public notes on the main page (with Isotope layout and pagination).
 - Click on a name of a Note Author on the main page and see his/her profile with Public notes.
 
+Test account:
+bob@gmail.com
+12345678
 
-Fully responsive.
+
+P.S. The app is fully responsive.
 
